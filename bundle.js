@@ -19673,7 +19673,11 @@
 
 	var _SmsSubmitComponentJs2 = _interopRequireDefault(_SmsSubmitComponentJs);
 
-	__webpack_require__(162);
+	var _SmsSendcodeComponentJs = __webpack_require__(162);
+
+	var _SmsSendcodeComponentJs2 = _interopRequireDefault(_SmsSendcodeComponentJs);
+
+	__webpack_require__(163);
 	exports["default"] = _react2["default"].createClass({
 	    displayName: "SmsComponent",
 
@@ -19685,6 +19689,7 @@
 	                "div",
 	                { className: "content-wrap" },
 	                _react2["default"].createElement(_SmsInputComponentJs2["default"], null),
+	                _react2["default"].createElement(_SmsSendcodeComponentJs2["default"], null),
 	                _react2["default"].createElement(_SmsSubmitComponentJs2["default"], null)
 	            )
 	        );
@@ -19767,13 +19772,48 @@
 /* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	exports["default"] = _react2["default"].createClass({
+	    displayName: "SmsSendcodeComponent",
+
+	    render: function render() {
+	        return _react2["default"].createElement(
+	            "div",
+	            { className: "posi-wrap clearfix" },
+	            _react2["default"].createElement("input", { type: "text", className: "smsInput", placeholder: "验证码" }),
+	            _react2["default"].createElement(
+	                "button",
+	                { className: "btn btn-sendVerCodeAfter", onClick: "getCode()" },
+	                "发送验证码"
+	            ),
+	            _react2["default"].createElement("p", { className: "boder-br" })
+	        );
+	    }
+	});
+	module.exports = exports["default"];
+
+/***/ },
+/* 163 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(163);
+	var content = __webpack_require__(164);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(165)(content, {});
+	var update = __webpack_require__(166)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -19790,21 +19830,21 @@
 	}
 
 /***/ },
-/* 163 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(164)();
+	exports = module.exports = __webpack_require__(165)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "/*sm*/\r\n.smsInput {\r\n    display: block;\r\n    width:73%;\r\n    float:left;\r\n    border:none;\r\n    font-size: 1.5rem;\r\n    color:#000;\r\n    padding: 1.9% 0;\r\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n    background: none;\r\n}\r\n.smsInput:focus {\r\n    outline: none;\r\n    border-bottom: none;\r\n}\r\n.posi-wrap{\r\n    position: relative;\r\n    padding: 3% 0;\r\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n    -webkit-appearance: none;\r\n}\r\n.boder-br{\r\n    padding-top: 3%;\r\n    width:100%;\r\n    float: right;\r\n    border-bottom: 1px solid #cccccc;\r\n}\r\n.smsInput:focus+.btn-sendVerCode+.boder-br{\r\n    border-bottom: 1px solid #ffc100;\r\n}\r\n.smsInput:focus~.boder-br{\r\n    border-bottom: 1px solid #ffc100;\r\n}\r\n.smsInput[disabled] {\r\n    background: #fff;\r\n}\r\n\r\n.smsInfo {\r\n    font-size: 1.4rem;\r\n    border-top: 1px solid #d9d9d9;\r\n    border-bottom: 1px solid #d9d9d9;\r\n}\r\n\r\n.smsInfo .item {\r\n    margin-top: 12px;\r\n    margin-bottom: 12px;\r\n}\r\n\r\n.smsInfo .item span {\r\n    margin-left: 7%;\r\n}\r\n\r\n.sms-span {\r\n    display: inline-block;\r\n    width: 55%;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    -o-text-overflow: ellipsis;\r\n    overflow: hidden;\r\n}\r\n\r\n.smsInfo li {\r\n    border-bottom: 1px solid #d9d9d9;\r\n}\r\n\r\n.smsInfo li:last-child {\r\n    border-bottom: none;\r\n}\r\n\r\n.smsLab {\r\n    color: #000;\r\n}\r\n.btn-sendVerCode,.btn-sendVerCodeAfter{\r\n    float:right;\r\n    width: 24%;\r\n}\r\n.btn-sendVerCode {\r\n    background-color: #ffe07f;\r\n    color: #bb8033;\r\n    padding: 1.9% 0;\r\n}\r\n\r\n.btn-sendVerCodeAfter {\r\n    background-color: #dcdcdc;\r\n    color: #ffffff;\r\n    padding: 1.9% 0;\r\n}\r\n\r\n.btnGrayColor{\r\n    color: #e6e6e6;\r\n}", ""]);
+	exports.push([module.id, "/*sm*/\r\n.smsInput {\r\n    display: block;\r\n    width:73%;\r\n    float:left;\r\n    border:none;\r\n    font-size: 1.5rem;\r\n    color:#000;\r\n    padding: 1.9% 0;\r\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n    background: none;\r\n}\r\n.smsInput:focus {\r\n    outline: none;\r\n    border-bottom: none;\r\n}\r\n.posi-wrap{\r\n    position: relative;\r\n    padding: 3% 0;\r\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n    -webkit-appearance: none;\r\n}\r\n.boder-br{\r\n    padding-top: 3%;\r\n    width:100%;\r\n    float: right;\r\n    border-bottom: 1px solid #cccccc;\r\n}\r\n.smsInput:focus+.btn-sendVerCode+.boder-br{\r\n    border-bottom: 1px solid #ffc100;\r\n}\r\n.smsInput:focus~.boder-br{\r\n    border-bottom: 1px solid #ffc100;\r\n}\r\n.smsInput[disabled] {\r\n    background: #fff;\r\n}\r\n\r\n.smsInfo {\r\n    font-size: 1.4rem;\r\n    border-top: 1px solid #d9d9d9;\r\n    border-bottom: 1px solid #d9d9d9;\r\n}\r\n\r\n.smsInfo .item {\r\n    margin-top: 12px;\r\n    margin-bottom: 12px;\r\n}\r\n\r\n.smsInfo .item span {\r\n    margin-left: 7%;\r\n}\r\n\r\n.sms-span {\r\n    display: inline-block;\r\n    width: 55%;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    -o-text-overflow: ellipsis;\r\n    overflow: hidden;\r\n}\r\n\r\n.smsInfo li {\r\n    border-bottom: 1px solid #d9d9d9;\r\n}\r\n\r\n.smsInfo li:last-child {\r\n    border-bottom: none;\r\n}\r\n\r\n.smsLab {\r\n    color: #000;\r\n}\r\n.btn-sendVerCode,.btn-sendVerCodeAfter{\r\n    float:right;\r\n    width: 24%;\r\n}\r\n.btn-sendVerCode {\r\n    background-color: #ffe07f;\r\n    color: #bb8033;\r\n    padding: 1.9% 0;\r\n}\r\n\r\n.btn-sendVerCodeAfter {\r\n    background-color: #b4b4b4;\r\n    color: #e6e6e6;\r\n    padding: 1.9% 0;\r\n}\r\n\r\n.btnGrayColor{\r\n    color: #e6e6e6;\r\n}", ""]);
 
 	// exports
 
 
 /***/ },
-/* 164 */
+/* 165 */
 /***/ function(module, exports) {
 
 	/*
@@ -19859,7 +19899,7 @@
 	};
 
 /***/ },
-/* 165 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

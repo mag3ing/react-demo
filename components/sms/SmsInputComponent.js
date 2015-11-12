@@ -15,7 +15,7 @@ export default React.createClass({
             this.setState({
                 telChecked: true
             });
-            alert("合法");
+            alert("手机号合法");
         }else{
             //无效
             return;

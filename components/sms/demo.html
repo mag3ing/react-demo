@@ -1,0 +1,13 @@
+<div class="content-wrap">
+    <form method="post">
+        <input type="tel" class="input" maxlength="11" ng-model='phoneNumber' placeholder="手机号" ng-change="update(phoneNumber)"/>
+        <div class="posi-wrap clearfix">
+            <input type="text" class="smsInput" ng-model='identifyingCode' placeholder="验证码" ng-change="btnCheck(identifyingCode)"/>
+            <button ng-if='!hasSend' class="btn btn-sendVerCode" ng-class="{'btnGrayColor': isBtnValid1}" ng-click="getCode()">发送验证码</button>
+            <button ng-if='hasSend' class="btn btn-sendVerCodeAfter" ng-class="{'btnGrayColor': isBtnValid1}">{{codeTime}}秒后重发</button>
+            <p class="boder-br"></p>
+        </div>
+        <input id="Jsubmit" type="submit" ng-click="submitSmsvertify()" class="btn c-white bg-orange m-t-15 f-1p8 pad-4 btnGrayColor" value="提交验证"/>
+    </form>
+
+</div>
